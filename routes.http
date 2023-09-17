@@ -16,6 +16,7 @@ Content-Type: audio/mpeg
 --WebAppBoundary--
 
 ###
+
 # @name create-transcription
 POST http://localhost:3333/videos/584e160d-bccb-414a-b978-e2b1e066ae4d/transcription
 Content-Type: application/json
@@ -23,6 +24,15 @@ Content-Type: application/json
 {
   "prompt": "pix"
 }
-
 ###
 
+# @name generate-ai-completion
+POST http://localhost:3333/ai/complete
+Content-Type: application/json
+
+{
+  "videoId": "584e160d-bccb-414a-b978-e2b1e066ae4d",
+  "temperature": 0.5,
+  "template": "Gere um resumo sucinto da transcrição do vídeo informada a seguir: '''{transcription}'''"
+}
+###
