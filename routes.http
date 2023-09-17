@@ -15,4 +15,14 @@ Content-Type: audio/mpeg
 < ./example.mp3
 --WebAppBoundary--
 
-# @name get-videos
+###
+# @name create-transcription
+POST http://localhost:3333/videos/584e160d-bccb-414a-b978-e2b1e066ae4d/transcription
+Content-Type: application/json
+
+{
+  "prompt": "pix"
+}
+
+###
+
